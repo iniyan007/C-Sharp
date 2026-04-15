@@ -7,3 +7,7 @@
 ## Task-2 Completed ✅
 
 - Simple Object-Oriented Programming (OOP)
+
+## Task-3 Completed ✅
+
+- Basic Collections and String Manipulation

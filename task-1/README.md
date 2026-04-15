@@ -1,4 +1,4 @@
-# Basic Data Types, Control Structures, and MethodsObjective:Requirements
+# Basic Data Types, Control Structures, and Methods
 
 - Write a console application that calculates the factorial of a given number.
 - Read an integer from the user.
