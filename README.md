@@ -19,3 +19,7 @@
 ## Task-5 Completed ✅
 
 - File I/O and Exception Handling
+
+## Task-6 Completed ✅
+
+- Delegates, Events, and Basic Event Handling
