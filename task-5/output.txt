@@ -1,0 +1,4 @@
+File Analysis Result:
+Lines: 24
+Words: 217
+Characters: 1529

@@ -1,0 +1,24 @@
+1. **Basic Data Types, Control Structures, and MethodsObjective:Requirements:**
+    - Write a console application that calculates the factorial of a given number.
+    - Read an integer from the user.
+    - Validate the input (ensure it’s a positive integer).
+    - Use loops (or recursion) to calculate the factorial.
+    - Display the result in the console.
+2. **Simple Object-Oriented Programming (OOP)Objective:Requirements:**
+    - Create a `Person` class with properties and methods.
+    - Define properties such as `Name` and `Age`.
+    - Implement a method `Introduce()` that prints a personalized greeting.
+    - Instantiate a few `Person` objects in your `Main` method and call `Introduce()` on
+3. **Basic Collections and String ManipulationObjective:Requirements:**
+    - Write a program to manage a list of strings (e.g., names or tasks).
+    - Use a `List<string>` to store items.
+    - Allow the user to add, remove, and display items.
+    - Utilize loops and basic string methods (like `Trim()`, `ToUpper()`) to process user input.
+4. **Working with Collections and LINQObjective:Requirements:**
+    - Create a student management console application.
+    - Define a `Student` class with properties such as `Name`, `Grade`, and `Age`.
+    - Populate a collection (e.g., a `List<Student>`) with sample data.
+    - Use LINQ to:
+        - Filter students who have a grade above a certain threshold.
+        - Sort the filtered results by name or grade.
+    - Display the filtered and sorted list.

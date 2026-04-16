@@ -11,3 +11,11 @@
 ## Task-3 Completed ✅
 
 - Basic Collections and String Manipulation
+
+## Task-4 Completed ✅
+
+- Working with Collections and LINQ
+
+## Task-5 Completed ✅
+
+- File I/O and Exception Handling
