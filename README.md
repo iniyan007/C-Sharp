@@ -23,3 +23,7 @@
 ## Task-6 Completed ✅
 
 - Delegates, Events, and Basic Event Handling
+
+## Task-7 Completed ✅
+
+- Asynchronous Programming and Multi-threadin
