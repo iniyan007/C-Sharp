@@ -1,0 +1,53 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code settings (optional)
+.vscode/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Rider / JetBrains
+.idea/
+
+# Visual Studio
+.vs/
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Test results
+TestResults/
+
+# Coverage reports
+coverage/
+*.coverage
+*.coveragexml
+
+# Publish output
+publish/
+
+# Environment variables
+.env
