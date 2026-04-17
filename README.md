@@ -27,3 +27,7 @@
 ## Task-7 Completed ✅
 
 - Asynchronous Programming and Multi-threadin
+
+## Task-8 Completed ✅
+
+- Generics and Interfaces with a Repository Pattern
