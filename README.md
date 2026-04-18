@@ -35,3 +35,7 @@
 ## Task-9 Completed ✅
 
 - Reflection and Custom Attributes
+
+## Task-10 Completed ✅
+
+- Building a Mini Microservice with ASP.NET Cores
