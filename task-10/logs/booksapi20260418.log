@@ -1,0 +1,69 @@
+[2026-04-18 12:57:07 WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2026-04-18 12:57:07 INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+[2026-04-18 12:57:07 INF] Database initialized successfully
+[2026-04-18 12:57:07 INF] Books API starting up on Development
+[2026-04-18 12:57:07 INF] Now listening on: http://localhost:5276
+[2026-04-18 12:57:07 INF] Application started. Press Ctrl+C to shut down.
+[2026-04-18 12:57:07 INF] Hosting environment: Development
+[2026-04-18 12:57:07 INF] Content root path: E:\Intern\C-Sharp\task-10
+[2026-04-18 12:57:16 INF] Request starting HTTP/1.1 GET http://localhost:5276/index.html - null null
+[2026-04-18 12:57:16 INF] → GET /index.html started
+[2026-04-18 12:57:16 INF] ← GET /index.html → 200 in 236ms
+[2026-04-18 12:57:16 INF] Request finished HTTP/1.1 GET http://localhost:5276/index.html - 200 null text/html;charset=utf-8 336.3012ms
+[2026-04-18 12:57:16 INF] Request starting HTTP/1.1 GET http://localhost:5276/swagger/v1/swagger.json - null null
+[2026-04-18 12:57:16 INF] → GET /swagger/v1/swagger.json started
+[2026-04-18 12:57:17 INF] ← GET /swagger/v1/swagger.json → 200 in 378ms
+[2026-04-18 12:57:17 INF] Request finished HTTP/1.1 GET http://localhost:5276/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 391.0964ms
+[2026-04-18 12:58:05 INF] Request starting HTTP/1.1 GET http://localhost:5276/api/Books?page=1&pageSize=10 - null null
+[2026-04-18 12:58:05 INF] → GET /api/Books started
+[2026-04-18 12:58:05 WRN] Failed to determine the https port for redirect.
+[2026-04-18 12:58:05 INF] Executing endpoint 'BooksApi.Controllers.BooksController.GetBooks (task-10)'
+[2026-04-18 12:58:05 INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BooksApi.DTOs.PagedResult`1[BooksApi.DTOs.BookResponseDto]]] GetBooks(Int32, Int32, System.String, System.String) on controller BooksApi.Controllers.BooksController (task-10).
+[2026-04-18 12:58:05 INF] Fetching books: page=1, size=10, genre=null, search=null
+[2026-04-18 12:58:06 INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Books" AS "b"
+WHERE NOT ("b"."IsDeleted")
+[2026-04-18 12:58:06 INF] Executed DbCommand (19ms) [Parameters=[@__p_1='10', @__p_0='0'], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."Author", "b"."CreatedAt", "b"."Genre", "b"."ISBN", "b"."IsDeleted", "b"."Price", "b"."PublishedYear", "b"."Title", "b"."UpdatedAt"
+FROM "Books" AS "b"
+WHERE NOT ("b"."IsDeleted")
+ORDER BY "b"."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[2026-04-18 12:58:06 INF] Executing OkObjectResult, writing value of type 'BooksApi.DTOs.PagedResult`1[[BooksApi.DTOs.BookResponseDto, task-10, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2026-04-18 12:58:06 INF] Executed action BooksApi.Controllers.BooksController.GetBooks (task-10) in 1127.4953ms
+[2026-04-18 12:58:06 INF] Executed endpoint 'BooksApi.Controllers.BooksController.GetBooks (task-10)'
+[2026-04-18 12:58:06 INF] ← GET /api/Books → 200 in 1236ms
+[2026-04-18 12:58:06 INF] Request finished HTTP/1.1 GET http://localhost:5276/api/Books?page=1&pageSize=10 - 200 null application/json; charset=utf-8 1266.2245ms
+[2026-04-18 12:59:37 INF] Request starting HTTP/1.1 POST http://localhost:5276/api/Books - application/json 150
+[2026-04-18 12:59:37 INF] → POST /api/Books started
+[2026-04-18 12:59:37 INF] CORS policy execution successful.
+[2026-04-18 12:59:37 INF] Executing endpoint 'BooksApi.Controllers.BooksController.CreateBook (task-10)'
+[2026-04-18 12:59:37 INF] Route matched with {action = "CreateBook", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BooksApi.DTOs.BookResponseDto]] CreateBook(BooksApi.DTOs.CreateBookDto) on controller BooksApi.Controllers.BooksController (task-10).
+[2026-04-18 12:59:37 INF] Creating book with ISBN 4359273490935
+[2026-04-18 12:59:37 INF] Executed DbCommand (4ms) [Parameters=[@__isbn_0='4359273490935' (Size = 13)], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."Author", "b"."CreatedAt", "b"."Genre", "b"."ISBN", "b"."IsDeleted", "b"."Price", "b"."PublishedYear", "b"."Title", "b"."UpdatedAt"
+FROM "Books" AS "b"
+WHERE NOT ("b"."IsDeleted") AND "b"."ISBN" = @__isbn_0
+LIMIT 1
+[2026-04-18 12:59:38 INF] Executed DbCommand (4ms) [Parameters=[@p0='Willson' (Nullable = false) (Size = 7), @p1='2026-04-18T07:29:37.6078847Z' (DbType = DateTime), @p2='Crime thriller' (Nullable = false) (Size = 14), @p3='4359273490935' (Nullable = false) (Size = 13), @p4='False', @p5='9993.99', @p6='2002', @p7='The Woods' (Nullable = false) (Size = 9), @p8=NULL (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Books" ("Author", "CreatedAt", "Genre", "ISBN", "IsDeleted", "Price", "PublishedYear", "Title", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id";
+[2026-04-18 12:59:38 INF] Book created with ID 5
+[2026-04-18 12:59:38 INF] Executing CreatedAtActionResult, writing value of type 'BooksApi.DTOs.BookResponseDto'.
+[2026-04-18 12:59:38 INF] Executed action BooksApi.Controllers.BooksController.CreateBook (task-10) in 1060.2717ms
+[2026-04-18 12:59:38 INF] Executed endpoint 'BooksApi.Controllers.BooksController.CreateBook (task-10)'
+[2026-04-18 12:59:38 INF] ← POST /api/Books → 201 in 1158ms
+[2026-04-18 12:59:38 INF] Request finished HTTP/1.1 POST http://localhost:5276/api/Books - 201 null application/json; charset=utf-8 1171.3951ms
+[2026-04-18 12:59:54 INF] Request starting HTTP/1.1 GET http://localhost:5276/api/Health - null null
+[2026-04-18 12:59:54 INF] → GET /api/Health started
+[2026-04-18 12:59:54 INF] Executing endpoint 'BooksApi.Controllers.HealthController.GetHealth (task-10)'
+[2026-04-18 12:59:54 INF] Route matched with {action = "GetHealth", controller = "Health"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetHealth() on controller BooksApi.Controllers.HealthController (task-10).
+[2026-04-18 12:59:54 INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2026-04-18 12:59:54 INF] Executed action BooksApi.Controllers.HealthController.GetHealth (task-10) in 27.4525ms
+[2026-04-18 12:59:54 INF] Executed endpoint 'BooksApi.Controllers.HealthController.GetHealth (task-10)'
+[2026-04-18 12:59:54 INF] ← GET /api/Health → 200 in 47ms
+[2026-04-18 12:59:54 INF] Request finished HTTP/1.1 GET http://localhost:5276/api/Health - 200 null application/json; charset=utf-8 55.0203ms
+[2026-04-18 13:00:18 INF] Application is shutting down...
